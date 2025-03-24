@@ -1,0 +1,35 @@
+.navbar-brand {
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+
+.navbar-brand span {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.active-link {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+}
+
+.nav-link:hover {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}

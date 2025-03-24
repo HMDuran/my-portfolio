@@ -1,32 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import "../styles/Navbar.css";
 
 function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); 
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 991);
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className={`navbar navbar-expand-lg ${isMobile ? "bg-light" : ""}`}>
       <div className="container">
-        <a className="navbar-brand" href="/">Hanah<span>Mae</span></a>
+        <a className="navbar-brand" href="/">
+          Hanah<span>mae.</span>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#projects">Projects</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">Contact</a>
-            </li>
+            {["About Me", "Portfolio", "Contact"].map((item, index) => {
+              const sectionId = item.replace(" ", "").toLowerCase();
+
+              return (
+                <li className="nav-item" key={index}>
+                  <a
+                    className={`nav-link ${activeSection === sectionId ? "active-link" : ""}`}
+                    href={`#${sectionId}`}
+                    onClick={() => setActiveSection(sectionId)}
+                  >
+                    {item}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
