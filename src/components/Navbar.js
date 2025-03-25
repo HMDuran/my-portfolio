@@ -15,7 +15,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg ${isMobile ? "bg-light" : ""}`}>
+    <nav className={`navbar navbar-expand-lg ${isMobile ? "mobile-navbar" : ""}`}>
       <div className="container">
         <a className="navbar-brand" href="/">
           Hanah<span>mae.</span>

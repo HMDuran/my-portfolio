@@ -1,3 +1,7 @@
+.navbar {
+    background-color: var(--secondary-color);
+}
+
 .navbar-brand {
     font-family: var(--font-family);
     font-weight: 700;
@@ -8,8 +12,9 @@
 }
 
 .nav-link {
-    color: var(--text-color);
+    color: var(--dark-light-color);
     transition: color 0.3s ease-in-out;
+    font-weight: 600;
 }
 
 .active-link {
@@ -18,7 +23,7 @@
 }
 
 .nav-link:hover {
-    font-weight: 500;
+    font-weight: 700;
     color: var(--primary-color);
 }
 
@@ -32,4 +37,24 @@
 .navbar-toggler:active {
     outline: none !important;
     box-shadow: none !important;
+}
+
+.mobile-navbar {
+    background-color: var(--primary-color);
+}
+
+.mobile-navbar .navbar-brand {
+    color: var(--secondary-color); 
+}
+
+.mobile-navbar span { 
+    color: var(--dark-color);
+}
+
+.mobile-navbar .nav-link {
+    color: var(--secondary-color);
+}
+
+.mobile-navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
 }
