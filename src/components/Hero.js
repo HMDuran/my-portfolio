@@ -39,8 +39,7 @@ function Hero() {
                     </p>
                     <div className="btn-container mt-4">
                         <button className="btn btn-primary" 
-                                onClick={() => window.open("https://storage.googleapis.com/hanah-cv-bucket/Hanah%20Mae%20Duran%20-%20CV.pdf", 
-                                "_blank")}>
+                            onClick={() => window.open(process.env.REACT_APP_CV_URL, "_blank")} >
                                 Resume
                         </button>
 
