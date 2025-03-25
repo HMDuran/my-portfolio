@@ -54,7 +54,7 @@
 }
 
 .hero .btn {
-    flex: 1 1 200px;
+    width: 150px;
     text-align: center;
 }
 
@@ -177,7 +177,25 @@
         display: none; 
     }
 
+    .btn {
+        flex: 1;
+    }
+
     .circle {
         display: none; 
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        height: 80vh;
+    }
+    .hero h1 {
+        font-size: 1.6rem; 
+        line-height: 1.1; 
+    }
+
+    .hero p {
+        font-size: 0.9rem; 
     }
 }

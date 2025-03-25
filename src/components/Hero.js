@@ -41,7 +41,7 @@ function Hero() {
                         <button className="btn btn-primary" 
                                 onClick={() => window.open("https://storage.googleapis.com/hanah-cv-bucket/Hanah%20Mae%20Duran%20-%20CV.pdf", 
                                 "_blank")}>
-                                View my CV
+                                Resume
                         </button>
 
                         <button className="btn btn-outline-secondary">Portfolio</button>
