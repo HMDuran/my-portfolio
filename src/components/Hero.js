@@ -28,9 +28,9 @@ function Hero() {
                 <div className="row align-items-center flex-column-reverse flex-lg-row">
                 <div className="col-lg-6 text-center text-lg-start">
                     <h1>
-                    Hello<br />
-                    I'm <span className="typing-effect">{typedText}</span><br />
-                    <span className="web-dev">Web Developer</span>
+                        Hello<br />
+                        I'm <span className="typing-effect">{typedText}</span><br />
+                        <span className="web-dev">Web Developer</span>
                     </h1>
                     <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,8 +38,13 @@ function Hero() {
                     minim veniam, quis nostrud exercitation.
                     </p>
                     <div className="btn-container mt-4">
-                    <button className="btn btn-primary">Download my CV</button>
-                    <button className="btn btn-outline-secondary">Portfolio</button>
+                        <button className="btn btn-primary" 
+                                onClick={() => window.open("https://storage.googleapis.com/hanah-cv-bucket/Hanah%20Mae%20Duran%20-%20CV.pdf", 
+                                "_blank")}>
+                                View my CV
+                        </button>
+
+                        <button className="btn btn-outline-secondary">Portfolio</button>
                     </div>
                 </div>
                 <div className="image-section col-lg-6 text-center d-none d-md-block">
