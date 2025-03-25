@@ -12,7 +12,7 @@
 }
 
 .nav-link {
-    color: var(--dark-light-color);
+    color: var(--light-dark-color);
     transition: color 0.3s ease-in-out;
     font-weight: 600;
 }
