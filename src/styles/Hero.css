@@ -1,6 +1,13 @@
 .hero {
-    height: 100vh;
-    padding: 20px;
+    position: relative; 
+    height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow: hidden; 
 }
 
 .hero h1 {
@@ -131,16 +138,19 @@
 }
 
 .hero-image {
-    position: relative; 
-    z-index: 2; 
+    position: absolute;
+    bottom: -350px;
+    right: 1%;
 
-    max-width: 100%; 
-    height: auto; 
+    transform: translateX(-50%);
 
-    opacity: 0; 
-    transform: translateY(50px);
+    max-width: 100%;
+    height: auto;
 
-    animation: fadeInBottomToTop 1s ease-in-out forwards; 
+    z-index: 2;
+    opacity: 0;
+
+    animation: fadeInBottomToTop 1s ease-in-out forwards;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -188,7 +198,7 @@
 
 @media (max-width: 360px) {
     .hero {
-        height: 80vh;
+        height: 70vh;
     }
     .hero h1 {
         font-size: 1.6rem; 
