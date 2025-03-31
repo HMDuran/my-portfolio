@@ -23,6 +23,7 @@ function About() {
 
   return (
     <motion.section
+      id="aboutme"
       className="about-me d-flex flex-column align-items-center justify-content-center"
       initial="hidden"
       whileInView="visible"

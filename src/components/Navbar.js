@@ -39,7 +39,7 @@ function Navbar() {
                 <li className="nav-item" key={index}>
                   <a
                     className={`nav-link ${activeSection === sectionId ? "active-link" : ""}`}
-                    href={`#${sectionId}`}
+                    href="#aboutme"
                     onClick={() => setActiveSection(sectionId)}
                   >
                     {item}
