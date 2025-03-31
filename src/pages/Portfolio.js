@@ -12,6 +12,7 @@ function Portfolio() {
 
   return (
     <motion.section
+      id="portfolio"
       className="portfolio-section d-flex flex-column align-items-center justify-content-center py-5 px-3"
       initial="hidden"
       whileInView="visible"

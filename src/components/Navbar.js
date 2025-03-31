@@ -17,31 +17,36 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["aboutme", "portfolio", "contact"];
-      let currentSection = "";
+  // Scroll event to track which section is active
+  const handleScroll = () => {
+    const sections = ["aboutme", "portfolio", "contact"];
+    let currentSection = "";
 
-      sections.forEach((sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
-            currentSection = sectionId;
-          }
+    sections.forEach((sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+          currentSection = sectionId;
         }
-      });
-
-      if (currentSection !== activeSection) {
-        setActiveSection(currentSection);  
       }
-    };
+    });
 
+    if (currentSection !== activeSection) {
+      setActiveSection(currentSection);  
+    }
+  };
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    // Call handleScroll once on page load to set the active section
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
+  // Handle click on navigation links
   const handleNavClick = (section) => {
     const sectionId = section.replace(" ", "").toLowerCase();
     setActiveSection(sectionId);
@@ -53,10 +58,18 @@ function Navbar() {
       }, 100);
     } else if (sectionId === "portfolio") {
       navigate("/portfolio");
+      setActiveSection("portfolio"); // Explicitly set portfolio as active
     } else {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Effect to handle the page load for /portfolio to set the correct active section
+  useEffect(() => {
+    if (location.pathname === "/portfolio") {
+      setActiveSection("portfolio");  // Set 'portfolio' as active when on the portfolio page
+    }
+  }, [location.pathname]);
 
   return (
     <nav className={`navbar navbar-expand-lg ${isMobile ? "mobile-navbar" : ""}`}>
