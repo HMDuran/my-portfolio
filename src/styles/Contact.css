@@ -1,0 +1,32 @@
+.contact-me-section {
+  padding: 60px 20px;
+  background-color:var(--secondary-color);
+  min-height: 70vh;
+}
+
+.contact-me-section .container {
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.contact-me-section .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: start;
+  gap: 10px; 
+}
+
+@media (max-width: 991px) {
+  .contact-info {
+    width: 500px !important;
+  }
+}

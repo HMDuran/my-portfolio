@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './pages/About';
 import PortfolioSection from './components/PortfolioSection'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Hero />
                 <About />
                 <PortfolioSection />
+                <Contact />
               </div>
             } />
           </Routes>
