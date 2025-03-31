@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import About from './pages/About';
 import PortfolioSection from './components/PortfolioSection'
 import Contact from './components/Contact'
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Contact />
               </div>
             } />
+            <Route path="/portfolio" element={<Portfolio />} /> 
           </Routes>
         </header>
       </div>
