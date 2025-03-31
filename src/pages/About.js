@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import "../styles/About.css";
 import placeholderImg from "../assets/img/about-me-placeholder.jpg";
+import Button from "../components/Button";
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -56,12 +58,11 @@ function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <a
-                href="#portfolio"
-                className="btn btn-primary"
-              >
-                View Portfolio
-              </a>
+              <Button
+                label="View Portfolio"
+                onClick={() => console.log("Portfolio Clicked")}
+                variant="primary"
+              />
             </motion.div>
           </motion.div>
         </div>

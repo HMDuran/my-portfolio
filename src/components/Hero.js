@@ -1,7 +1,9 @@
-import "../styles/Hero.css";
-import placeholderImg from "../assets/img/placeholder.png";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
+import "../styles/Hero.css";
+import placeholderImg from "../assets/img/placeholder.png";
+import Button from "./Button";
 
 function Hero() {
   const name = "Hanah Mae,";
@@ -71,13 +73,16 @@ function Hero() {
               viewport={{ once: false, amount: 0.3 }}
               variants={fadeInVariants}
             >
-              <button
-                className="btn btn-primary"
+              <Button
+                label="Resume"
                 onClick={() => window.open(process.env.REACT_APP_CV_URL, "_blank")}
-              >
-                Resume
-              </button>
-              <button className="btn btn-outline-secondary">Portfolio</button>
+                variant="primary"
+              />
+              <Button
+                label="Portfolio"
+                onClick={() => console.log("Portfolio Clicked")}
+                variant="outline-primary" 
+              />
             </motion.div>
           </motion.div>
           <motion.div
