@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ContactInfo from "./ContactInfo";
 import Form from "./Form";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/Contact.css";
 
 const fadeInVariants = {
@@ -17,14 +19,35 @@ function Contact() {
     { type: "textarea", name: "message", placeholder: "Your Message", required: true },
   ];
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    console.log("Form data submitted:");
-    for (let [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
+    setIsSubmitting(true);
+
+    const formData = {
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      toast.success(data.message); 
+      e.target.reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Error sending email."); 
+    } finally {
+      setIsSubmitting(false);
     }
-    alert("Form submitted successfully!");
   };
 
   return (
@@ -62,10 +85,13 @@ function Contact() {
               fields={fields}
               onSubmit={handleSubmit}
               buttonText="Send Message"
+              isSubmitting={isSubmitting}
             />
           </motion.div>
         </div>
       </div>
+
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
     </motion.section>
   );
 }

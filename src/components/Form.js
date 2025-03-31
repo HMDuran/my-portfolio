@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Form.css";
 import Button from "./Button";
 
-function Form({ fields, onSubmit, buttonText }) {
+function Form({ fields, onSubmit, buttonText, isSubmitting }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(e);
@@ -42,13 +42,8 @@ function Form({ fields, onSubmit, buttonText }) {
 
       <Button
         label={buttonText}
-        onClick={(e) => {
-          const form = e.target.closest("form");
-          if (form) {
-            form.requestSubmit();
-          }
-        }}
         type="primary"
+        disabled={isSubmitting} 
       />
     </form>
   );
