@@ -17,6 +17,7 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
   const handleScroll = () => {
     const sections = ["aboutme", "portfolio", "contact"];
     let currentSection = "";
@@ -54,7 +55,7 @@ function Navbar() {
       }, 100);
     } else if (sectionId === "portfolio") {
       navigate("/portfolio");
-      setActiveSection("portfolio");
+      setActiveSection("portfolio"); 
     } else {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     }
