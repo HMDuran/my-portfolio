@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './pages/About';
+import PortfolioSection from './components/PortfolioSection'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <div>
                 <Hero />
                 <About />
+                <PortfolioSection />
               </div>
             } />
           </Routes>
