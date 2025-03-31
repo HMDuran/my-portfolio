@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/About.css";
 import placeholderImg from "../assets/img/about-me-placeholder.jpg";
@@ -11,6 +12,7 @@ const fadeInVariants = {
 };
 
 function About() {
+  const navigate = useNavigate();
   const bio = `
     Hi! I'm Hanah Mae, Qui alias necessitatibus sed culpa dolorum non modi dolor aut nulla veniam qui amet amet. 
     Est perspiciatis eaque sed accusamus dignissimos eum enim sunt est doloremque voluptas qui sequi unde. 
@@ -61,7 +63,7 @@ function About() {
             >
               <Button
                 label="View Portfolio"
-                onClick={() => console.log("Portfolio Clicked")}
+                onClick={() => navigate("/portfolio")}
                 variant="primary"
               />
             </motion.div>

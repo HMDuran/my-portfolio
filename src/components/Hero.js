@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/Hero.css";
 import placeholderImg from "../assets/img/placeholder.png";
@@ -8,6 +9,7 @@ import Button from "./Button";
 function Hero() {
   const name = "Hanah Mae,";
   const [typedText, setTypedText] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     let index = 0;
@@ -80,7 +82,7 @@ function Hero() {
               />
               <Button
                 label="Portfolio"
-                onClick={() => console.log("Portfolio Clicked")}
+                onClick={() => navigate("/portfolio")}
                 variant="outline-primary" 
               />
             </motion.div>

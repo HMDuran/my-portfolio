@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './pages/About';
-import PortfolioSection from './components/PortfolioSection'
-import Contact from './components/Contact'
+import PortfolioSection from './components/PortfolioSection';
+import Contact from './components/Contact';
 import Portfolio from "./pages/Portfolio";
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
             <Route path="/" element={
               <div>
                 <Hero />
-                <About />
+                <About id="aboutme" /> 
                 <PortfolioSection />
-                <Contact />
+                <Contact id="contact" />
               </div>
             } />
             <Route path="/portfolio" element={<Portfolio />} /> 

@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 import Button from "./Button";
 import Projects from "../data/Projects";
 import PortfolioCard from "./PortfolioCard";
 import "../styles/PortfolioSection.css";
 
 function PortfolioSection() {
+  const navigate = useNavigate();
   const fadeInVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -63,7 +66,11 @@ function PortfolioSection() {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
-          <Button label="See More Projects" variant="outline-primary" />
+          <Button 
+            label="See More Projects" 
+            variant="outline-primary" 
+            onClick={() => navigate("/portfolio")}
+            />
         </motion.div>
       </div>
     </motion.section>

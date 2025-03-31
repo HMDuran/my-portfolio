@@ -52,7 +52,7 @@ function Contact() {
 
   return (
     <motion.section
-      id="contactme"
+      id="contact"
       className="contact-me-section d-flex align-items-center"
       initial="hidden"
       whileInView="visible"
