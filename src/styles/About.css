@@ -1,0 +1,90 @@
+.about-me {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    min-height: 100vh; 
+}
+
+.about-me .profile-image {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 70%; 
+    height: auto;    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.profile-image:hover {
+transform: scale(1.1);
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.about-me .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--light-dark-color);
+}
+
+.about-me h2 span {
+    color: var(--primary-color);
+}
+
+.about-me p {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--light-dark-color);
+    margin-bottom: 15px;
+}
+
+.about-me .btn-container {
+    margin-top: 30px;
+}
+
+.about-me .btn-primary {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.about-me .btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .about-me h2 {
+        font-size: 2rem;
+        padding-top: 25px;
+    }
+
+    .about-me p {
+        font-size: 1rem;
+    }
+
+    .row {
+        flex-direction: column; 
+    }
+
+    .about-me .profile-image {
+        max-width: 40%; 
+      }
+}
+
+@media (max-width: 360px) {
+
+    .about-me h2 {
+        font-size: 1.6rem; 
+        line-height: 1.1; 
+    }
+
+    .about-me p {
+        font-size: 0.9rem; 
+    }
+}
