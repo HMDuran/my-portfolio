@@ -29,9 +29,9 @@ function Portfolio() {
         </motion.h2>
 
         <div className="row g-4">
-          {Projects.map((project, index) => (
+          {Projects.map((project) => (
             <motion.div
-              key={index}
+              key={project.id}
               className="col-md-4"
               variants={fadeInVariants}
               initial="hidden"

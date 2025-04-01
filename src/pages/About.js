@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+import AboutDetails from "../data/AboutDetails"; 
 import "../styles/About.css";
 import placeholderImg from "../assets/img/about-me-placeholder.jpg";
 import Button from "../components/Button";
@@ -13,16 +14,8 @@ const fadeInVariants = {
 
 function About() {
   const navigate = useNavigate();
-  const bio = `
-    Hi! I'm Hanah Mae, Qui alias necessitatibus sed culpa dolorum non modi dolor aut nulla veniam qui amet amet. 
-    Est perspiciatis eaque sed accusamus dignissimos eum enim sunt est doloremque voluptas qui sequi unde. 
-    Quo iusto magnam eum ipsam dolorem aut commodi voluptatem ut tempore eius ut maxime assumenda.
-
-    Et galisum nihil hic voluptas consectetur sed exercitationem laborum qui expedita debitis At labore saepe et aspernatur praesentium vel quam eligendi. 
-    Sit architecto repellendus sit dolores labore sit nihil molestiae id aspernatur cumque. 
-    Et quasi incidunt qui assumenda asperiores qui officia error est internos asperiores ut obcaecati molestiae..
-  `;
-
+  const { bio } = AboutDetails[0];
+  
   return (
     <motion.section
       id="aboutme"

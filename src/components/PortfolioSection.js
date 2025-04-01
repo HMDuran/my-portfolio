@@ -9,6 +9,13 @@ import "../styles/PortfolioSection.css";
 
 function PortfolioSection() {
   const navigate = useNavigate();
+
+  const selectedIds = ["1", "2", "3"]; 
+  const filteredProjects = Projects.filter((p) => selectedIds.includes(p.id));
+
+  const uniqueProjects = [...new Set(filteredProjects)]; 
+  const displayedProjects = uniqueProjects.slice(0, 3); 
+
   const fadeInVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -41,9 +48,9 @@ function PortfolioSection() {
         </motion.p>
 
         <div className="row">
-          {Projects.slice(0, 3).map((project, index) => (
+          {displayedProjects.map((project) => (
             <motion.div
-              key={index}
+              key={project.id}
               className="col-md-4"
               variants={fadeInVariants}
               initial="hidden"

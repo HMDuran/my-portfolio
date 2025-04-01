@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+import HeroInfo from "../data/HeroInfo";
 import "../styles/Hero.css";
 import placeholderImg from "../assets/img/placeholder.png";
 import Button from "./Button";
@@ -35,6 +36,8 @@ function Hero() {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
   };
 
+  const { caption } = HeroInfo[0];
+
   return (
     <motion.section
       className="hero d-flex align-items-center"
@@ -64,9 +67,7 @@ function Hero() {
               viewport={{ once: false, amount: 0.3 }}
               variants={fadeInVariants}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation.
+              {caption}
             </motion.p>
             <motion.div
               className="btn-container mt-4"

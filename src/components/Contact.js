@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ContactInfo from "./ContactInfo";
+import ContactDetails from "../data/ContactDetails"; 
 import Form from "./Form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -50,6 +51,8 @@ function Contact() {
     }
   };
 
+  const { number, email, github, linkedin } = ContactDetails[0];
+
   return (
     <motion.section
       id="contact"
@@ -68,10 +71,10 @@ function Contact() {
             viewport={{ once: false, amount: 0.3 }}
           >
             <ContactInfo
-              phone="+63 975-895-6760"
-              email="hanahmae.duran@gmail.com"
-              github="https://github.com/HMDuran"
-              linkedin="https://www.linkedin.com/in/hanahmaeduran/"
+              phone={number}
+              email={email}
+              github={github}
+              linkedin={linkedin}
             />
           </motion.div>
           <motion.div
