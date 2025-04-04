@@ -20,6 +20,13 @@ const Projects = [
         description: "A fun web game where you solve 10 clever riddles to test your wit. Built with Node.js & Express.js.",
         githubLink: "https://github.com/HMDuran/the-riddle-game",
       },
+      {
+        id: "4",
+        image: "https://github.com/user-attachments/assets/a63243a0-5581-4857-9f87-5c37e0bae2d9",
+        title: "Note Keeper",
+        description: "A note-taking application designed for seamless organization and management of personal notes.",
+        githubLink: "hhttps://github.com/HMDuran/note-keeper-app",
+      },
   ];
   
   export default Projects;
