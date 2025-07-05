@@ -7,10 +7,8 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors({
-  origin: "https://hanah-portfolio.web.app/", 
-  methods: ["POST"]
-}));
+app.use(cors());
+
 app.use(bodyParser.json());
 
 app.post("/api/send-email", async (req, res) => {
