@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";  
 import "../styles/Navbar.css";
 
@@ -18,7 +18,7 @@ function Navbar() {
   }, []);
 
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const sections = ["aboutme", "portfolio", "contact"];
     let currentSection = "";
 
@@ -35,14 +35,13 @@ function Navbar() {
     if (currentSection !== activeSection) {
       setActiveSection(currentSection);  
     }
-  };
-
+  }, [activeSection]);
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeSection]);
+  }, [handleScroll]);
 
   const handleNavClick = (section) => {
     const sectionId = section.replace(" ", "").toLowerCase();
@@ -92,7 +91,7 @@ function Navbar() {
                 <li className="nav-item" key={index}>
                   <a
                     className={`nav-link ${activeSection === sectionId ? "active-link" : ""}`}
-                    href="#"
+                    href="/"
                     onClick={(e) => {
                       e.preventDefault();
                       handleNavClick(item);

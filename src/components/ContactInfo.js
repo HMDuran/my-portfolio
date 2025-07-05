@@ -7,7 +7,7 @@ import "../styles/ContactInfo.css";
 
 function ContactInfo({ phone, email, github, linkedin }) {
   const githubUsername = github.split("https://github.com/")[1];
-  const linkedinUsername = linkedin.split("https://www.linkedin.com/in/")[1] ?.replace("/", "");
+  const linkedinUsername = linkedin.split("https://www.linkedin.com/in/")[1]?.replace("/", "");
 
   return (
     <div className="contact-info">

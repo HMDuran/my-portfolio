@@ -61,3 +61,9 @@
 .mobile-navbar .navbar-toggler-icon {
     filter: brightness(0) invert(1);
 }
+
+@media (max-width: 991px) {
+  .mobile-navbar .nav-link.active-link {
+    color: #000 !important; 
+  }
+}
