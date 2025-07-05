@@ -1,14 +1,14 @@
 const Projects = [
     {
         id: "1",
-        image: "https://private-user-images.githubusercontent.com/91524935/428620788-af2cf581-6df5-449b-923d-f3949a3ac7da.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM0MjU3MjIsIm5iZiI6MTc0MzQyNTQyMiwicGF0aCI6Ii85MTUyNDkzNS80Mjg2MjA3ODgtYWYyY2Y1ODEtNmRmNS00NDliLTkyM2QtZjM5NDlhM2FjN2RhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMzElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzMxVDEyNTAyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZhNWFlYTk2ZGEwZjc2MTVmYjM0ZWRhZjEwODI0NzY2ZjQ2MGUxNjQyNTgxZjJmZWY1Y2U2YTY5ZjlkNWJkMGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.W_WZEckhhc_3fshUfKbJmvLXuQ72ea4BN6MtzxdUpO0",
+        image: "https://github-production-user-asset-6210df.s3.amazonaws.com/91524935/428620788-af2cf581-6df5-449b-923d-f3949a3ac7da.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250409T053521Z&X-Amz-Expires=300&X-Amz-Signature=6dc77e0c520bd24f4911e694f3189ccf7b7390a38c168d1dd82debb789a2fa74&X-Amz-SignedHeaders=host",
         title: "Dog Boutique",
         description: "A dog boutique website built using PHP, MySQL, JavaScript (AJAX), CSS, and SQL, running on XAMPP.",
         githubLink: "https://github.com/HMDuran/dog-boutique",
       },
       {
         id: "2",
-        image: "https://private-user-images.githubusercontent.com/91524935/428610857-17b8e797-a91f-4e1f-a199-de939d0d314c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM0MjQ1MzQsIm5iZiI6MTc0MzQyNDIzNCwicGF0aCI6Ii85MTUyNDkzNS80Mjg2MTA4NTctMTdiOGU3OTctYTkxZi00ZTFmLWExOTktZGU5MzlkMGQzMTRjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMzElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzMxVDEyMzAzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTcwYTE2NjM2ZTgyOGZmNjA3NjRiNzBmMDliNTAyM2U2OGViZmU1Mzc1YjA3NmI1NmE0NjM5Mjk5OGQ3MTRkYmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.VkYNYuVDZTclcPxdvnFuKElc-WC4c9Drc2fK_ScsK5w",
+        image: "SS",
         title: "To-Do List",
         description: "A simple To-Do List app using JavaScript, HTML, and SASS.",
         githubLink: "https://github.com/HMDuran/todo-list",
@@ -22,7 +22,7 @@ const Projects = [
       },
       {
         id: "4",
-        image: "https://github.com/user-attachments/assets/a63243a0-5581-4857-9f87-5c37e0bae2d9",
+        image: "https://github-production-user-asset-6210df.s3.amazonaws.com/91524935/430332200-a63243a0-5581-4857-9f87-5c37e0bae2d9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250409T053305Z&X-Amz-Expires=300&X-Amz-Signature=ce71e643bb0feb5d64dcd81e28c208c284a8d939579a8408a63ea66d86975c51&X-Amz-SignedHeaders=host",
         title: "Note Keeper",
         description: "A note-taking application designed for seamless organization and management of personal notes.",
         githubLink: "hhttps://github.com/HMDuran/note-keeper-app",
