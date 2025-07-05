@@ -25,4 +25,5 @@ yarn-error.log*
 
 .env
 server/.env
-server/node_modules/pgLite-debug.log
+server/node_modules
+pgLite-debug.log
