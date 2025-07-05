@@ -1,8 +1,6 @@
 const HeroInfo = [
     {
-        caption: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation.`
+        caption: `Who loves turning ideas into responsive, user-friendly websites — one line of code at a time. Whether it’s a personal project or a team collaboration, I strive to build clean, efficient, and accessible web experiences that make an impact.`
     }
 ];
   
