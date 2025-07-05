@@ -47,7 +47,7 @@ function About() {
             viewport={{ once: false, amount: 0.3 }}
           >
             <h2>About <span>Hanah Mae.</span></h2>
-            <div>{AboutDetails[0].bio}</div>
+            <div>{bio}</div>
             <motion.div
               className="btn-container mt-4"
               initial={{ opacity: 0, y: 20 }}
