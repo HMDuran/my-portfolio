@@ -38,7 +38,7 @@ const Projects = [
         image: openBlogImg,
         title: "OpenBlog",
         description: "A full-stack blogging platform with rich-text editing, image uploads, and secure user auth. Built with Angular, Express, and MongoDB Atlas.",
-        githubLink: "hhttps://github.com/HMDuran/note-keeper-app",
+        githubLink: "https://github.com/HMDuran/note-keeper-app",
       },
   ];
   
