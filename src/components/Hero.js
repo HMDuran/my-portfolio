@@ -77,7 +77,7 @@ function Hero() {
               variants={fadeInVariants}
             >
               <Button
-                label="Resume"
+                label="My CV"
                 onClick={() => window.open(process.env.REACT_APP_CV_URL, "_blank")}
                 variant="primary"
               />
