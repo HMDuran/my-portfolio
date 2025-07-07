@@ -10,7 +10,7 @@ import "../styles/PortfolioSection.css";
 function PortfolioSection() {
   const navigate = useNavigate();
 
-  const selectedIds = ["1", "2", "3"]; 
+  const selectedIds = ["1", "2", "4"]; 
   const filteredProjects = Projects.filter((p) => selectedIds.includes(p.id));
 
   const uniqueProjects = [...new Set(filteredProjects)]; 
